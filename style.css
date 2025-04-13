@@ -1,135 +1,165 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-.wrapper{
-    min-height: 100vh;
-    background-color: rgb(0, 0, 0);
+.wrapper {
+  min-height: 100vh;
+  background-color: rgb(0, 0, 0);
 }
 
-.wrapper .container{
-    margin: 0 auto;
-    padding: 0 16px;
+.wrapper .container {
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-.logo{
-    padding: 16px 0;
-    border-bottom: 1px solid rgb(0, 255, 255);
+.logo {
+  padding: 16px 0;
+  border-bottom: 1px solid rgb(0, 255, 255);
 }
 
 .logo p {
-    font-size:  35px;
-    color: white;
-    font-weight: bold;
+  font-size: 35px;
+  color: white;
+  font-weight: bold;
 }
 
-.logo p span{
-    color: cyan;
+.logo p span {
+  color: cyan;
 }
 
 /* movie search */
 
-.search__container{
-    background: linear-gradient(black, cyan);
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.search__container {
+  background: linear-gradient(black, cyan);
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.searchELM{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
+.searchELM {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
 
-.searchELM h3{
-    align-self: center;
-    margin-right: 16px;
-    font-size: 24px;
-    color: white;
-    font-weight: 500;
-    margin-bottom: 1.5px;
+.searchELM h3 {
+  align-self: center;
+  margin-right: 16px;
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 1.5px;
 }
 
-.searchELM .search__box{
-    padding: 16px 32px;
-    font-size: 24px;
-    border: none;
-    border-radius: 15px;
-    outline: none;
-    color: darkcyan;
-    width: 350px;
+input::placeholder {
+  color: darkcyan;
+  text-align: center;
+  text-overflow: hidden;
+}
+
+input[type=text] {
+  text-align: center;
+}
+
+.searchELM .search__box {
+  padding: 16px 32px;
+  font-size: 24px;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  color: darkcyan;
+  width: 350px;
 }
 
 .movie__card {
-    display: flex;
-    align-items: center;
-    width: 1500px;
-    margin-top: 16px;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: rgb(2, 167, 167);
-    transition: box-shadow 300ms ease;
-  }
-  
-  .movie__card:hover {
-    background-color: #474646;
-    opacity: 1;
-  }
-  
-  /* Movie poster */
-  .movie__poster {
-    width: 80px;
-    height: 120px;
-    object-fit: cover;
-    margin-right: 16px;
-    border-radius: 6px;
-  }
-  
-  /* Movie text info */
-  .movie__info {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  
-  .movie__title {
-    font-size: 1.1rem;
-    color: #222;
-  }
-  
-  .movie__year {
-    color: #000000;
-    opacity: 0.6;
-    margin-top: 5px;
-  }
+  display: flex;
+  align-items: center;
+  width: 1500px;
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgb(2, 167, 167);
+  transition: box-shadow 300ms ease;
+}
 
-  #results{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .no__results {
-    padding: 16px;
-    text-align: center;
-    font-style: italic;
-    color: #ee0000;
-  }
+.movie__card:hover {
+  background-color: #474646;
+  opacity: 1;
+}
 
-  /* MEDIA */
+/* Movie poster */
+.movie__poster {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+  margin-right: 16px;
+  border-radius: 6px;
+}
 
-  @media(max-width: 1500px){
-    .search__container, .movie__card{
-        width: 100%;
-    }
+/* Movie text info */
+.movie__info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.movie__title {
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.movie__year {
+  color: #000000;
+  opacity: 0.6;
+  margin-top: 5px;
+}
+
+#results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no__results {
+  padding: 16px;
+  text-align: center;
+  font-style: italic;
+  color: #ee0000;
+}
+
+/* sort box */
+
+#sortSelect {
+  border-radius: 16px;
+  text-align: center;
+  color: darkcyan;
+}
+
+.sort__section {
+  margin-top: 30px;
+}
+
+label {
+  font-size: 18px;
+  color: white;
+  margin-left: 12px;
+}
+
+/* media */
+
+@media(max-width: 1500px) {
+
+  .search__container,
+  .movie__card {
+    width: 100%;
   }
+}
