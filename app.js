@@ -70,6 +70,12 @@ function sortAndShowResults() {
     }
   });
 
+  if (sortType === "by__nameAZ") {
+    return a.Title.localeCompare(b.Title);
+  } else if (sortType === "by__nameZA") {
+    return b.Title.localeCompare(a.Title);
+  }
+
   let promises = [];
 
   for (let i = 0; i < sorted.length; i++) {
